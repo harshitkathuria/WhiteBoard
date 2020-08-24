@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhiteBoard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/8ad2e12fec.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="main-header">
+    <div class="container">
+      <div class="brand-name">
+        <h1>WhiteBoard</h1>
+      </div>
+      <ul class="menu">
+        <li class="menu-options marker dropdownBtn" style="position: relative;">
+          <i class="fas fa-marker"></i>
+          <i class="fas fa-angle-down"></i>
+          <!-- Dropdown -->
+          <div class="dropdown-content">
+            <div class="dropdown-color">
+              <button class="btn" value="black"><i class="fas fa-circle" style="color: black;"></i></button>
+              <button class="btn" value="green"><i class="fas fa-circle" style="color: green;"></i></button>
+              <button class="btn" value="blue"><i class="fas fa-circle" style="color: blue;"></i></button>
+            </div>
+            <input type="range" class="dropdown-slider slider-pencil" min="1" max="50" value="5">
+          </div>
+        </li>
+        <li class="menu-options eraser dropdownBtn" style="position: relative;">
+          <i class="fas fa-eraser"></i>
+          <i class="fas fa-angle-down"></i>
+          <div class="dropdown-content">
+            <input type="range" class="dropdown-slider slider-eraser" min="1" max="50" value="5">
+          </div>
+        </li>
+        <li class="menu-options undo">
+          <i class="fas fa-undo"></i>
+        </li>
+        <li class="menu-options redo">
+          <i class="fas fa-redo"></i>
+        </li>
+        <li class="menu-options clear">
+          <i class="fas fa-trash"></i>
+        </li>
+        <li class="menu-options image">
+          <i class="fas fa-image"></i>
+          <input type="file" id="image-input" accept="image/*" style="display: none;">
+        </li>
+        <li class="menu-options note">
+          <i class="fas fa-sticky-note"></i>
+        </li>
+        <li class="menu-options download">
+          <i class="fas fa-download"></i>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Canvas Area -->
+  <canvas id="canvas"></canvas>
+  <!-- Sticky Note -->
+  <div class="sticky-note">
+    <div class="sticky-nav">
+      <i class="fas fa-circle close-note" style="color: #b50b0b;"></i>
+      <i class="fas fa-circle min-note" style="color: #a0ef85;"></i>
+    </div>
+    <textarea class="note-text" cols="40" rows="10"></textarea>
+  </div>
+  <div class="sticky-note" id="img-note">
+    <div class="sticky-nav">
+      <i class="fas fa-circle close-note" style="color: #b50b0b;"></i>
+      <i class="fas fa-circle min-note" style="color: #a0ef85;"></i>
+    </div>
+    <textarea class="note" cols="40" rows="10"></textarea>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
